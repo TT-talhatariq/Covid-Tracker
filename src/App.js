@@ -7,6 +7,7 @@ import Spinner from './components/util/Spinner'
 import covidImage from './image.png'
 
 const App = () => {
+  //States
   const [data, setData] = useState(null)
   const [country, setCountry] = useState('')
   const [loading, setLoading] = useState(true)
@@ -36,6 +37,7 @@ const App = () => {
       })
   }, [])
 
+  //Handling the country change
   const handleCountryChange = async (country) => {
     console.log(country)
     fetchData(country)
@@ -50,6 +52,7 @@ const App = () => {
       })
   }
 
+  //Spinner untill data loads
   if (loading) return <Spinner className={classes.spinner} />
 
   return (

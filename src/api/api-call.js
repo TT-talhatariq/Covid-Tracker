@@ -2,7 +2,7 @@ import axios from 'axios'
 
 const url = 'https://covid19.mathdro.id/api'
 
-//Fetch Data from API
+//Fetch Global Data from API
 export const fetchData = async (country) => {
   let changeAbleUrl = url
 
@@ -12,7 +12,7 @@ export const fetchData = async (country) => {
 
   try {
     const { data } = await axios.get(`${changeAbleUrl}`)
-
+    //Destructuring
     const modifiedData = {
       confirmed: data.confirmed,
       recovered: data.recovered,
@@ -26,6 +26,7 @@ export const fetchData = async (country) => {
   }
 }
 
+//Fetching daily data of a country
 export const fetchDailyData = async () => {
   try {
     const { data } = await axios.get(
@@ -43,6 +44,7 @@ export const fetchDailyData = async () => {
   }
 }
 
+//fetching the data by country
 export const fetchCountries = async () => {
   try {
     const { data } = await axios.get(`${url}/countries`)

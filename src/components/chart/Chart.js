@@ -18,6 +18,7 @@ const Charts = (props) => {
       })
   }, [])
 
+  // Line Chart if data is Global
   const lineChart = dailyData.length ? (
     <Line
       data={{
@@ -55,6 +56,7 @@ const Charts = (props) => {
     />
   ) : null
 
+  //Bar Chart if data is in Bar
   let barChart
   if (props.data !== null) {
     barChart = (
