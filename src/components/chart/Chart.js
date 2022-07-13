@@ -65,7 +65,7 @@ const Charts = (props) => {
           labels: ['Infected', 'Recovered', 'Deaths'],
           datasets: [
             {
-              label: 'People',
+              label: `Current state in ${props.country}`,
               backgroundColor: [
                 'rgba(0, 0, 255, 0.5)',
                 'rgba(0, 255, 0, 0.5)',
