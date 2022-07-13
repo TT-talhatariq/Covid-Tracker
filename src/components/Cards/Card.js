@@ -76,7 +76,6 @@ const Cards = (props) => {
               Deaths
             </Typography>
             <Typography variant='h4'>
-              {' '}
               <CountUp
                 start={0}
                 end={props.data.deaths.value}
